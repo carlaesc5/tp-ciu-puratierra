@@ -1,0 +1,17 @@
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: url('../../assets/background.jpg');
+    background-size: cover;
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    text-align: left;
+    font-weight: 700;
+    font-size: 40px;
+    max-width: 800px;
+}
