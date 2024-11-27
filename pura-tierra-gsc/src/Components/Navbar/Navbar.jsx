@@ -21,7 +21,7 @@ const Navbar = () => {
                         </div>
                         <ul className={isOpen ? 'nav-link active' : 'nav-link'}>
                             <li>
-                                <Link to="hero" smooth={true} duration={500}>Inicio</Link>
+                                <Link to="main" smooth={true} duration={500}>Inicio</Link>
                             </li>
                             <li>
                                 <Link to="about" smooth={true} duration={500}>Nuestra historia</Link>

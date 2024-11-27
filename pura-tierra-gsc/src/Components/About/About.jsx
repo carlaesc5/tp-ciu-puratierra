@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className='about'>
       <div className="about-left">
-        <a href="https://www.youtube.com/watch?v=LTERF9t2bws&ab_channel=InstitutodeCapacitaci%C3%B3ndelOriente%28ICO%29"><img src={organic} alt='Mujer sosteniendo planta - link a youtube' title='Mujer sosteniendo planta - link a youtube' className='organic'></img></a>
+        <a href="https://www.youtube.com/watch?v=LTERF9t2bws&ab_channel=InstitutodeCapacitaci%C3%B3ndelOriente%28ICO%29" target='_blank'><img src={organic} alt='Mujer sosteniendo planta - link a youtube' title='Mujer sosteniendo planta - link a youtube' className='organic'></img></a>
       </div>
       <about className="right">
         <h3>Sobre Nosotros</h3>

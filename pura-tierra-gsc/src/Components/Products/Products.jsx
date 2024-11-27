@@ -1,12 +1,17 @@
 import React from 'react'
 import './Products.css'
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import prod1 from '../../assets/azucar-organic.jpg'
 import prod2 from '../../assets/pasta-organic.jpg'
 import prod3 from '../../assets/yerba-organic.jpg'
 import arrow from '../../assets/right-arrow.png'
 
 const Products = () => {
+    const navigate = useNavigate();
+    const redirigir = () => {
+        navigate('/nueva-ruta');  
+      };
+
     return (
         <div className='container'>
             <div className='products'>
@@ -32,7 +37,7 @@ const Products = () => {
                 </div>
             </div>
             <div className="button">
-                <button className='btn'>Ver más <img src={arrow} alt="" /> </button>
+                <button className='btn' onClick={redirigir}>Ver más <img src={arrow} alt="" /> </button>
             </div>
         </div>
 
