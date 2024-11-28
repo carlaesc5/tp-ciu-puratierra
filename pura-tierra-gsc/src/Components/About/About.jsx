@@ -1,6 +1,7 @@
 import React from 'react'
 import './About.css'
 import organic from '../../assets/organic.png'
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -14,6 +15,9 @@ const About = () => {
         <p>Somos una empresa dedicada a la comercialización de productos orgánicos. Fundada en 2017, Pura Tierra nació con el objetivo de ofrecer opciones saludables y sostenibles, respondiendo a las crecientes preocupaciones sobre la salud y el medio ambiente.</p>
         <p>Desde nuestros inicios en Buenos Aires, hemos crecido gracias a la confianza de nuestros clientes y la calidad de nuestros productos.</p>
         <p>Hoy en día, Pura Tierra tiene presencia tanto en el mercado digital como en tiendas físicas, brindando acceso a una amplia gama de productos que cumplen con los más altos estándares de calidad y sostenibilidad.</p>
+        <Link to="/fabricantes">
+                    <button className="btn-fabricantes">Ver Fabricantes</button>
+        </Link>
       </about>
     </div>
   )

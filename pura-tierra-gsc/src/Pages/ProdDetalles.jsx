@@ -8,7 +8,7 @@ const ProductoDetalle = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3001/productos/${id}`)
+    fetch(`http://localhost:5000/productos/${id}`)
       .then(response => response.json())
       .then(data => {
         setProducto(data);
@@ -19,6 +19,7 @@ const ProductoDetalle = () => {
         setLoading(false);
       });
   }, [id]);
+
 
   if (loading) {
     return <div>Cargando...</div>;
@@ -35,8 +36,8 @@ const ProductoDetalle = () => {
       <p><strong>Nombre:</strong> {producto.nombre}</p>
       <p><strong>Descripción:</strong> {producto.descripcion}</p>
       <p><strong>Precio:</strong> ${producto.precio}</p>
-      <p><strong>Componentes:</strong> {producto.componentes.join(', ')}</p>
-      <p><strong>Fabricantes:</strong> {producto.fabricantes.join(', ')}</p>
+      <p><strong>Componentes:</strong> </p>
+
     </div>
   );
 };

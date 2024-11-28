@@ -9,7 +9,7 @@ const CatalogoProductos = () => {
   
  
   useEffect(() => {
-    fetch('http://localhost:3001/productos',{
+    fetch('http://localhost:5000/productos',{
     }) 
       .then(response => response.json())
       .then(data => {
