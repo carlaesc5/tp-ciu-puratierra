@@ -8,7 +8,7 @@ const CatalogoProductos = () => {
   
  
   useEffect(() => {
-    fetch('https://api.example.com/products') 
+    fetch('http://localhost:3001/productos') 
       .then(response => response.json())
       .then(data => {
         setProductos(data);
@@ -22,7 +22,7 @@ const CatalogoProductos = () => {
 
  
   const verDetallesProducto = (productoId) => {
-    const producto = productos.find(p => p.id === productoId);
+    const producto = producto.find(p => p.id === productoId);
     setProductoSeleccionado(producto);
   };
 
