@@ -1,0 +1,82 @@
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.producto-card {
+    display: flex;           /* Usamos flexbox para distribuir los elementos dentro de la tarjeta */
+    flex-direction: column;  /* Los elementos (imagen, descripción, botón) estarán en una columna */
+    align-items: center;     /* Centra el contenido horizontalmente */
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.producto-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.producto-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 15px 0;
+}
+
+.producto-card p {
+    font-size: 0.9rem;
+    
+    margin: 0 10px;
+}
+
+.producto-card p strong {
+    font-size: 1.1rem;
+    color: #214a2c;
+    margin-top: 10px;
+    display: block;
+}
+
+.producto-card button {
+    background-color: #178f67;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 15px 0;
+    border-radius: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.producto-card button:hover {
+    background-color: #166e4c;
+}
+
+
+.loading {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 50px;
+}

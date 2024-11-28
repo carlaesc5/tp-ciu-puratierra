@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'; 
-import './ProdCatalog.css';
+import { useParams } from 'react-router-dom';
+import './ProdDetalles.css';  // Asegúrate de que este archivo CSS esté importado
 
 const ProductoDetalle = () => {
   const [producto, setProducto] = useState(null);
@@ -20,7 +20,6 @@ const ProductoDetalle = () => {
       });
   }, [id]);
 
-
   if (loading) {
     return <div>Cargando...</div>;
   }
@@ -31,13 +30,39 @@ const ProductoDetalle = () => {
 
   return (
     <div className="producto-detalles">
-      <h3>Detalles del Producto</h3>
       <img src={producto.pathImg} alt={producto.nombre} />
-      <p><strong>Nombre:</strong> {producto.nombre}</p>
-      <p><strong>Descripción:</strong> {producto.descripcion}</p>
-      <p><strong>Precio:</strong> ${producto.precio}</p>
-      <p><strong>Componentes:</strong> </p>
+      <div className="producto-detalles-info">
+        <h3>Detalles del Producto</h3>
+        <p><strong>Nombre:</strong> {producto.nombre}</p>
+        <p><strong>Descripción:</strong> {producto.descripcion}</p>
+        <p><strong>Precio:</strong> ${producto.precio}</p>
+        
+        <div>
+          <p><strong>Componentes:</strong></p>
+          <ul>
+            {producto.componentes && producto.componentes.length > 0 ? (
+              producto.componentes.map((componente) => (
+                <li key={componente.id}>{componente.nombre} - {componente.descripcion}</li>
+              ))
+            ) : (
+              <p>No tiene componentes.</p>
+            )}
+          </ul>
+        </div>
 
+        <div>
+          <p><strong>Fabricantes:</strong></p>
+          <ul>
+            {producto.fabricantes && producto.fabricantes.length > 0 ? (
+              producto.fabricantes.map((fabricante) => (
+                <li key={fabricante.id}>{fabricante.nombre}</li>
+              ))
+            ) : (
+              <p>No tiene fabricantes.</p>
+            )}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,41 +1,44 @@
 import React, { useState, useEffect } from 'react';
 import './ProdCatalog.css'
+import Title from '../Components/Title/Title'
 import { Link } from 'react-router-dom';
 
 const CatalogoProductos = () => {
-  const [productos, setProductos] = useState([]);  
-  const [productoSeleccionado, setProductoSeleccionado] = useState(null); 
-  const [loading, setLoading] = useState(true);  
-  
- 
+  const [productos, setProductos] = useState([]);
+  const [productoSeleccionado, setProductoSeleccionado] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+
   useEffect(() => {
-    fetch('http://localhost:5000/productos',{
-    }) 
+    fetch('http://localhost:5000/productos', {
+    })
       .then(response => response.json())
       .then(data => {
         setProductos(data);
-        setLoading(false); 
+        setLoading(false);
       })
       .catch(error => {
         console.error("Error al obtener los productos:", error);
         setLoading(false);
       });
-  }, []);  
+  }, []);
 
- 
+
   const verDetallesProducto = (productoId) => {
     const producto = productos.find(p => p.id === productoId);
     setProductoSeleccionado(producto);
   };
 
-  
+
   if (loading) {
     return <div>Cargando...</div>;
   }
 
   return (
     <div>
-      <h1>Catálogo de Productos</h1>
+      <div className='container'>
+        <Title subtitle='' title='Catálogo de productos' />
+      </div>
 
       <div className="catalogo">
         {productos.map(producto => (
