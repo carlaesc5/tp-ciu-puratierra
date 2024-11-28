@@ -31,3 +31,18 @@
     color: #000F38;
     margin: 10px;
 }
+
+.btn-fabricantes {
+    padding: 10px 25px;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 30px; 
+    cursor: pointer;
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #214a2c;
+}

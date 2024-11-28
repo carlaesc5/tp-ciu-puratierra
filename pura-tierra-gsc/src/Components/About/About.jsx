@@ -16,7 +16,7 @@ const About = () => {
         <p>Desde nuestros inicios en Buenos Aires, hemos crecido gracias a la confianza de nuestros clientes y la calidad de nuestros productos.</p>
         <p>Hoy en día, Pura Tierra tiene presencia tanto en el mercado digital como en tiendas físicas, brindando acceso a una amplia gama de productos que cumplen con los más altos estándares de calidad y sostenibilidad.</p>
         <Link to="/fabricantes">
-                    <button className="btn-fabricantes">Ver Fabricantes</button>
+                    <button className="btn-fabricantes">Explorar fabricantes y componentes</button>
         </Link>
       </about>
     </div>

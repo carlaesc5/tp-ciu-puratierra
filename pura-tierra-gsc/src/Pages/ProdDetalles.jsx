@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import './ProdDetalles.css';  // Asegúrate de que este archivo CSS esté importado
+import './ProdDetalles.css';  
 
 const ProductoDetalle = () => {
   const [producto, setProducto] = useState(null);
