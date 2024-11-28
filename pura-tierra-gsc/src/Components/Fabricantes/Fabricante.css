@@ -1,0 +1,52 @@
+/* Container for the main layout of the Fabricantes page */
+.container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .catalogo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Esto asegura que las tarjetas se ajusten a diferentes tamaños de pantalla */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Styling for each fabricante card */
+  .fabricante-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Adding a hover effect for the cards */
+  .fabricante-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling for the image in each card */
+  .fabricante-card img {
+    width: 250px;  /* Ensures the image spans the full width of the card */
+    height: 200px;  /* Sets a fixed height */
+    object-fit: contain;  /* Ensures the image is cropped to cover the space */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Title of the fabricante card */
+  .fabricante-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #333;
+  }
+  
+  /* Description of the fabricante card */
+  .fabricante-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 15px 15px;
+  }

@@ -1,0 +1,47 @@
+.container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .catalogo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .fabricante-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .fabricante-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  .fabricante-card img {
+    width: 250px;  
+    height: 200px;  
+    object-fit: contain; 
+    border-bottom: 1px solid #ddd;
+  }
+
+  .fabricante-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #333;
+  }
+
+  .fabricante-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 15px 15px;
+  }
