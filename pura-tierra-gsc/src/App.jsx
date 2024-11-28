@@ -6,7 +6,7 @@ import ProdDetalles from './Pages/ProdDetalles';
 
 import Home from './Pages/Home'
 import ProdCat from './Pages/ProdCatalog'
-import FabricComp from './Pages/Fabric&Comp'
+import FabricComp from './Pages/FabComp'
 
 const App = () => {
   return (

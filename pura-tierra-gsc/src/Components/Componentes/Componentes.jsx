@@ -51,3 +51,5 @@ const Componentes = () => {
         </div>
     );
 };
+
+export default Componentes

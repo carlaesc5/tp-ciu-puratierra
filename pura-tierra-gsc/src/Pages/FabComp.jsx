@@ -2,7 +2,7 @@ import React from 'react'
 import Fabricantes from '../Components/Fabricantes/Fabricantes'
 import Componentes from '../Components/Componentes/Componentes'
 
-const FabricComp = () => {
+const FabComp = () => {
   return (
     <div>
         <Fabricantes />
@@ -11,4 +11,4 @@ const FabricComp = () => {
   )
 }
 
-export default FabricComp
+export default FabComp
