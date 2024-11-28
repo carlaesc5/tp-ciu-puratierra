@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ProdCatalog.css'
+import { Link } from 'react-router-dom';
 
 const CatalogoProductos = () => {
   const [productos, setProductos] = useState([]);  
@@ -23,7 +24,7 @@ const CatalogoProductos = () => {
 
  
   const verDetallesProducto = (productoId) => {
-    const producto = producto.find(p => p.id === productoId);
+    const producto = productos.find(p => p.id === productoId);
     setProductoSeleccionado(producto);
   };
 
@@ -43,18 +44,13 @@ const CatalogoProductos = () => {
             <h3>{producto.nombre}</h3>
             <p>{producto.descripcion}</p>
             <p><strong>${producto.precio}</strong></p>
+            <Link to={`/producto/${producto.id}`}>
+              <button>Ver Detalles</button>
+            </Link>
           </div>
         ))}
       </div>
 
-      {productoSeleccionado && (
-        <div className="producto-detalle">
-          <h2>{productoSeleccionado.nombre}</h2>
-          <img src={productoSeleccionado.pathImg} alt={productoSeleccionado.nombre} />
-          <p>{productoSeleccionado.descripcion}</p>
-          <p><strong>Precio: ${productoSeleccionado.precio}</strong></p>
-        </div>
-      )}
     </div>
   );
 };

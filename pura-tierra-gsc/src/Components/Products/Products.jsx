@@ -10,7 +10,7 @@ import arrow from '../../assets/right-arrow.png'
 const Products = () => {
     const navigate = useNavigate();
     const redirigir = () => {
-        navigate('/products');  
+        navigate('/productos');  
       };
 
     return (
