@@ -6,10 +6,11 @@ import prod2 from '../../assets/pasta-organic.jpg'
 import prod3 from '../../assets/yerba-organic.jpg'
 import arrow from '../../assets/right-arrow.png'
 
+
 const Products = () => {
     const navigate = useNavigate();
     const redirigir = () => {
-        navigate('/nueva-ruta');  
+        navigate('/products');  
       };
 
     return (

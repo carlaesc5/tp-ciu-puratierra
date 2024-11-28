@@ -8,7 +8,8 @@ const CatalogoProductos = () => {
   
  
   useEffect(() => {
-    fetch('http://localhost:3001/productos') 
+    fetch('http://localhost:3001/productos',{
+    }) 
       .then(response => response.json())
       .then(data => {
         setProductos(data);
@@ -38,20 +39,20 @@ const CatalogoProductos = () => {
       <div className="catalogo">
         {productos.map(producto => (
           <div key={producto.id} className="producto-card" onClick={() => verDetallesProducto(producto.id)}>
-            <img src={producto.image} alt={producto.name} />
-            <h3>{producto.name}</h3>
-            <p>{producto.description}</p>
-            <p><strong>${producto.price}</strong></p>
+            <img src={producto.pathImg} alt={producto.nombre} />
+            <h3>{producto.nombre}</h3>
+            <p>{producto.descripcion}</p>
+            <p><strong>${producto.precio}</strong></p>
           </div>
         ))}
       </div>
 
       {productoSeleccionado && (
         <div className="producto-detalle">
-          <h2>{productoSeleccionado.name}</h2>
-          <img src={productoSeleccionado.image} alt={productoSeleccionado.name} />
-          <p>{productoSeleccionado.description}</p>
-          <p><strong>Precio: ${productoSeleccionado.price}</strong></p>
+          <h2>{productoSeleccionado.nombre}</h2>
+          <img src={productoSeleccionado.pathImg} alt={productoSeleccionado.nombre} />
+          <p>{productoSeleccionado.descripcion}</p>
+          <p><strong>Precio: ${productoSeleccionado.precio}</strong></p>
         </div>
       )}
     </div>
