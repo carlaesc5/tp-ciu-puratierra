@@ -7,7 +7,7 @@ const Philosophy = () => {
         <div className='about'>
             <div className="about-left">
                 <p>En Pura Tierra, creemos que la salud y el bienestar de nuestros clientes van de la mano con el respeto al medio ambiente. Nos dedicamos a ofrecer productos orgánicos de la más alta calidad, libres de químicos, promoviendo prácticas agrícolas sostenibles y apoyando a los productores locales. Nuestra misión es proporcionar alternativas saludables y responsables, brindando transparencia y educación para fomentar decisiones conscientes.</p>
-                <Link to="/fabricantes">
+                <Link to="/fabcomp">
                     <button className="btn-fabricantes">Explorar fabricantes y componentes</button>
                 </Link>
             </div>

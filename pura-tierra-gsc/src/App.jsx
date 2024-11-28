@@ -6,7 +6,7 @@ import ProdDetalles from './Pages/ProdDetalles';
 import Home from './Pages/Home';
 import ProdCat from './Pages/ProdCatalog';
 import FabComp from './Pages/FabComp';
-import Fabricantes from './Components/Fabricantes/Fabricantes';
+
 
 const App = () => {
   return (
@@ -17,7 +17,6 @@ const App = () => {
         <Route path="productos" element={<ProdCat />} />
         <Route path="producto/:id" element={<ProdDetalles />} />
         <Route path="fabcomp" element={<FabComp />} />
-        <Route path="fabricantes" element={<Fabricantes />} />
       </Routes>
       <Footer />
     </Router>
