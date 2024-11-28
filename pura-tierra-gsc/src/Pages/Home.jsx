@@ -10,17 +10,25 @@ import Contact from '../Components/Contact/Contact'
 const Home = () => {
     return (
         <div>
-            <Hero />
-            <About />
-            <Philosophy/>
+            <div id="main">
+                <Hero />
+            </div>
+            <div id="about">
+                <About />
+            </div>
+            <div id="philosophy">
+                <Philosophy />
+            </div>
             <div className='container'>
                 <Title subtitle='Conoce' title='Nuestros Productos Destacados' />
                 <Products />
             </div>
-            <Title subtitle='Contactate' title='Con Nosotros' />
-            <Contact />
+            <div id="contact">
+                <Title subtitle='Contactate' title='Con Nosotros' />
+                <Contact />
+            </div>
         </div>
-    )
-}
+    );
+};
 
 export default Home

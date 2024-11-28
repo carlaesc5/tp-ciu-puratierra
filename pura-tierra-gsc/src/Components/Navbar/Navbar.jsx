@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import './Navbar.css'
+import React, { useState } from 'react';
+import './Navbar.css';
 import { FaBars } from "react-icons/fa6";
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
-
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -20,17 +20,18 @@ const Navbar = () => {
                             <h2>Pura Tierra</h2>
                         </div>
                         <ul className={isOpen ? 'nav-link active' : 'nav-link'}>
+                            {/* Usamos Link de React Router para redirigir a la Home */}
                             <li>
-                                <Link to="main" smooth={true} duration={500}>Inicio</Link>
+                                <Link to="/" className="nav-link">Inicio</Link>
                             </li>
                             <li>
-                                <Link to="about" smooth={true} duration={500}>Nuestra historia</Link>
+                                <ScrollLink to="about" smooth={true} duration={500} className="nav-link">Nuestra historia</ScrollLink>
                             </li>
                             <li>
-                                <Link to="products" smooth={true} duration={500}>Productos</Link>
+                                <ScrollLink to="products" smooth={true} duration={500} className="nav-link">Productos</ScrollLink>
                             </li>
                             <li>
-                                <Link to="contact" smooth={true} duration={500}>Contactanos</Link>
+                                <ScrollLink to="contact" smooth={true} duration={500} className="nav-link">Contactanos</ScrollLink>
                             </li>
                         </ul>
                         <div className="icon" onClick={toggleMenu}>
@@ -40,7 +41,8 @@ const Navbar = () => {
                 </div>
             </header>
         </>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;
+
